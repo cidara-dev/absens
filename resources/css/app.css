@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  @apply antialiased;
+}
+
+/* 1.14 Image Preview */
+.image-preview, #callback-preview {
+  width: 250px;
+  height: 250px;
+  border: 2px dashed #ddd;
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+  color: #ecf0f1;
+}
+
+.image-preview input, #callback-preview input {
+  line-height: 200px;
+  font-size: 200px;
+  position: absolute;
+  opacity: 0;
+  z-index: 10;
+}
+
+.image-preview label, #callback-preview label {
+  position: absolute;
+  z-index: 5;
+  opacity: 0.8;
+  cursor: pointer;
+  background-color: #bdc3c7;
+  width: 150px;
+  height: 50px;
+  font-size: 12px;
+  line-height: 50px;
+  text-transform: uppercase;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+}
+
+  
+.quill > * {
+  border-color: inherit !important;
+  color: inherit !important;
+}
+.quill > .ql-toolbar {
+  /* border radius of the toolbar */
+  border-radius: 10px 10px 0 0;
+}
+.quill > .ql-container {
+  /* border radius of the container and for font size*/
+  font-size: inherit;
+  border-radius: 0 0 10px 10px;
+}
+.ql-toolbar.ql-snow .ql-picker-label {
+  color: inherit !important;
+  opacity: 0.76;
+}
+.ql-snow .ql-picker {
+  color: inherit !important;
+}
+.quill > .ql-container > .ql-editor.ql-blank::before {
+  /* for placeholder */
+  color: inherit;
+}
+.ql-snow.ql-toolbar button svg {
+  opacity: 0.76;
+  color: currentColor;
+}
+.ql-snow .ql-stroke {
+  /* for the border of the editor */
+  stroke: currentColor !important;
+}
+.ql-snow .ql-fill {
+  /* for the bg color */
+  fill: currentColor !important;
+}
+.ql-picker-item {
+  /* for dropdown */
+  color: #444 !important;
+}
